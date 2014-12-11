@@ -143,8 +143,18 @@ public abstract class Game extends Canvas implements Runnable {
 	 * </code>
 	 */
 	public synchronized void start() {
+		System.out.println(
+				"+-+-+-+-\n" +
+				"JGameSimplified - Loaded & Ready\n" +
+				"Preparing thread...");
+		
 		running = true;
 		new Thread(this).start();
+		
+		System.out.println("Thread loaded (start)!\n\n" +
+				"JGameSimplified - Created by: Jacob Bevilacqua\n" +
+				"Check out/Contribute to the source code @ https://github.com/Bevilacqua/JGameSimplified\n" +
+				"+-+-+-+-");
 	}
 	
 	/**
