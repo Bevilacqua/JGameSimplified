@@ -32,6 +32,7 @@ public abstract class Game extends Canvas implements Runnable {
 	
 
 	/**
+	 * Create a new Game
 	 * @param screenWidth The width in pixels of the screen
 	 * @param screenHeight The height in pixels of the screen
 	 * @param title The title of the window
@@ -60,6 +61,7 @@ public abstract class Game extends Canvas implements Runnable {
 	}
 	
 	/**
+	 * Create a new Game
 	 * @param screenWidth The width in pixels of the screen
 	 * @param screenHeight The height in pixels of the screen
 	 * @param title The title of the window
@@ -129,12 +131,29 @@ public abstract class Game extends Canvas implements Runnable {
 		}
 	}
 	
+	/**
+	 * Starts the game loop. Correct usage should be found in the main method;
+	 * <br>
+	 * EX:
+	 * <br>
+	 * <code>
+	 * public static void main(String args[]) { <br>
+	 * &#09; new Game().start(); <br>
+	 * }
+	 * </code>
+	 */
 	public synchronized void start() {
 		running = true;
 		new Thread(this).start();
 	}
 	
+	/**
+	 * Updated every tick in the game loop
+	 */
 	public abstract void update();
+	/**
+	 * Rendered every "Should Render" in the game loop
+	 */
 	public abstract void render();
 
 	private void self_render() {
@@ -168,10 +187,20 @@ public abstract class Game extends Canvas implements Runnable {
 		this.showFPS = show;
 	}
 	
+	/**
+	 * Set the color to be used by the Graphics object
+	 * @param color Color to use
+	 * 
+	 * <br>EX: <code>Color.red</code>
+	 */
 	public void setColor(Color color) {
 		g.setColor(color);
 	}
 	
+	/**
+	 * Get the delta value from the game loop
+	 * @return The delta value in millisecounds
+	 */
 	public float getDelta() {
 		return this.delta;
 	}

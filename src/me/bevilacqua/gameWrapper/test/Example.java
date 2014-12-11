@@ -5,6 +5,7 @@ import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 
 import me.bevilacqua.gameWrapper.Game;
+import me.bevilacqua.gameWrapper.Input.Input;
 
 public class Example extends Game {
 
@@ -20,27 +21,25 @@ public class Example extends Game {
 
 	@Override
 	public void update() {
-		input.update();
-		if(input.keyDown(KeyEvent.VK_LEFT)) {
+		if(input.keyDown(Input.LEFT)) {
 			x -= speed * getDelta();
 		}
-		else if(input.keyDown(KeyEvent.VK_RIGHT)) {
+		if(input.keyDown(Input.RIGHT)) {
 			x += speed * getDelta();
 		}
 		
-		else if(input.keyDown(KeyEvent.VK_UP)) {
+		if(input.keyDown(Input.UP)) {
 			y -= speed * getDelta();
 		}
-		else if(input.keyDown(KeyEvent.VK_DOWN)) {
+		if(input.keyDown(Input.DOWN)) {
 			y += speed * getDelta();
 		}
-		
 	}
 
 	@Override
 	public void render() {
 		setColor(Color.red);
-		g.drawRect(x,y,50,50);
+		g.fillRect(x,y,50,50);
 	}
 	
 	public static void main(String args[]) {
