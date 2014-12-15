@@ -16,6 +16,7 @@ Feel free to fork and alter but please keep these basic guidlines in mind:
 Creating a game with JGameSimplified is **simple.** The first step is downloading the JGameSimplified.jar and adding it to your project's build path. If you don't know how check out this tutorial: http://goo.gl/ytURT6  
 
 There are two ways to get the JGameSimplified.jar file.
+
 1. Download the latest stable release from the <a href="https://github.com/Bevilacqua/JGameSimplified/releases">release page</a>
 2. Build the project yourself. **Be careful the most recent commit may not be stable.**
 
