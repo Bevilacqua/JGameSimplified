@@ -60,6 +60,7 @@ public static void main(String args[]) {
 ```
 
 Now that our main method is set up we can tap into the game loop to update and render to the screen. Rendering is easy with JGameSimplified. There is no need to create an image buffer, buffer strategy , or graphics object because it has all been done behind the scenes. Rendering is as easy as utilizing the Graphics object pre-named `g`. There are a ton of things we can use the graphics object to render such as circles and images. For this tutorial we will just be creating a rectangle but for a full list of all rendering methods found im the graphics object check out the javadocs: http://goo.gl/CK3rE2 We will use the `drawRect()` method to draw a rectangle. It takes four paramaters:
+
 1. The x position of the rectangle
 2. The y position of the rectangle
 3. The width of the rectangle
