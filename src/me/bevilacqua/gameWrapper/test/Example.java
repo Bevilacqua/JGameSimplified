@@ -1,11 +1,10 @@
 package me.bevilacqua.gameWrapper.test;
 
 import java.awt.Color;
-import java.awt.Graphics;
-import java.awt.event.KeyEvent;
 
 import me.bevilacqua.gameWrapper.Game;
 import me.bevilacqua.gameWrapper.Input.Input;
+import me.bevilacqua.gameWrapper.image.GameImage;
 
 public class Example extends Game {
 
@@ -14,9 +13,11 @@ public class Example extends Game {
 	private int x = 50;
 	private int y = 50;
 	private int speed = 3;
+	private GameImage test;
 	
 	public Example() {
 		super(500, 500, "Example Game");
+		test = new GameImage("res\\test.png");
 	}
 
 	@Override
@@ -39,7 +40,8 @@ public class Example extends Game {
 	@Override
 	public void render() {
 		setColor(Color.red);
-		g.fillRect(x,y,50,50);
+//		g.fillRect(x,y,50,50);
+		test.draw(x, y, g);
 	}
 	
 	public static void main(String args[]) {
