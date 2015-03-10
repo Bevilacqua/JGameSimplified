@@ -28,4 +28,5 @@ public class GameImage {
 	public void draw(int x , int y , Graphics g) {
 		g.drawImage(this.image, x, y, null);
 	}
+	
 }

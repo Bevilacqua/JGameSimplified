@@ -175,7 +175,6 @@ public abstract class Game extends Canvas implements Runnable {
 		
 		
 		g = bs.getDrawGraphics();
-		
 		g.drawImage(this.screenImage , 0, 0, getWidth(), getHeight(), null);	
 		
 		render();
@@ -215,5 +214,18 @@ public abstract class Game extends Canvas implements Runnable {
 		return this.delta;
 	}
 
+	/**
+	 * @return The width of the screen
+	 */
+	public int getWidth() {
+		return this.screenWidth;
+	}
+	
+	/**
+	 * @return The height of the screen
+	 */
+	public int getHeight() {
+		return this.screenHeight;
+	}
 	
 }
