@@ -83,4 +83,5 @@ public void render() {
 ##The tutorial is incomplete and does not yet cover
 * The update method
 * Input management
+* Images / Animated images
 
