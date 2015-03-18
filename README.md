@@ -79,9 +79,20 @@ public void render() {
   g.drawRect(50,50,50,50);
 }
 ```
+We can move our rectange around with only a few changes. If we declare a X and Y variable for the position of our rectangle we can move it using the update method.
+
+```Java
+ public void update() {
+  x += 10; //Move the rectangle by to on the x and y axis.
+  y += 10;
+ }
+ 
+ public void render() {
+  g.drawRect(x,x,50,50);
+ }
+```
 
 ##The tutorial is incomplete and does not yet cover
-* The update method
 * Input management
 * Images / Animated images
 
